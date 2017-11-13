@@ -11,7 +11,7 @@ const mySwapi = axios.create({
     baseURL: swapiBaseURL, // this is the baseURL used to build up an endpoint URL
     method: 'get', // default   
     responseType: 'json' // this may need to change if Wookiee needs to be scoped at a later date
-  });
+});
 
 module.exports = {
     mySwapi: mySwapi

@@ -53,8 +53,8 @@ let getStops = (inMGLT) => {
                             calculatedStops = 'unknown';
                         }
                     }
-                    else{
-                       calculatedStops = 'unknown';
+                    else {
+                        calculatedStops = 'unknown';
                     }
                     starshipObj = { "starshipName": data[i].name, "stops": calculatedStops };
                     starshipsStops.push(starshipObj);
