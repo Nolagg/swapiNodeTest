@@ -22,27 +22,27 @@ npm install
 
 
 ## Assumptions
-- JSON encoders only!  Apologies to Wookiee encoders :)  
+- JSON encoders only. No Wookiee encoding considered yet. 
 - Pages only contain 10 objects - big assumption but works for now.  Another solution would be to introduce an outer layer promise when retrieving all objects from a resource.  The outer promise would be resolved when a null value is encountered in the 'next' key.
-- The calculation for the number of stops is 
 - The number of hours in the various time units are as follows:
     - "day": 24
     - "week": 168
     - "month": 730.001
     - "year": 8760
 
-## Dependencies and Requirements 
+## Requirements 
 - NodeJS version 6 at the very least.  Older versions of node will not suffice as the promise-based http library Axios is heavily utilised.  Javascript promises require ECMAScript 6.  The application was developed using 6.11.3.
 
-## Dependencies (included in package.json so will be automatically included when you run npm install. Exception to this is SWAPI - just need this to run)
+## Dependencies
+(included in package.json so will be automatically included when you run npm install. Exception to this is SWAPI - just need this to run)
 - swapi-co
     - The Star Wars API [`SWAPI`](https://swapi.co/)
 - prompt
     - command line interface for NodeJS [`prompt`](https://github.com/SBoudrias/Inquirer.js) v 4.0.0
 - axios
     - http client [`axios`](https://github.com/axios/axios) v0.17.0
-- (Also mocha, chai and nock for testing purposes)
+- (Also mocha, chai and nock for testing purposes, although nock has not been implemented yet!)
 
 
 ## Additional Information
-To include the library included in this project in a web-based solution, the project would need to be transpiled with a compiler like babel and polyfill to ensure all browsers are supported i.e. to support a full ES2015+ environment. This is because of the promise utilisation throughout the code.
+To include the library included in this project in a web-based solution, the project would need to be transpiled with a compiler like babel and polyfill. Babel would ensure most modern browsers would be supported i.e. support of a full ES2015+ environment.
